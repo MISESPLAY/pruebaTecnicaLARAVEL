@@ -6,25 +6,22 @@ API REST para crear, listar, actualizar y eliminar tareas. El proyecto usa Larav
 
 - Docker Engine con Docker Compose v2
 - Puertos locales `8000`, `5173` y `3306` disponibles
+- Si usas Windows O MAC , usar WSL con la distro de Ubuntu de preferencia
+  
 
-No se requiere instalar PHP, Composer, Node.js ni MariaDB en el equipo anfitrion.
 
 ## Instalacion
 
 1. Clona el repositorio y entra al directorio del proyecto.
 
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd PruebaTecnica
-```
 
 2. Crea el archivo de entorno.
 
-```bash
-cp .env.example .env
+```
+.env.example .env
 ```
 
-3. Ajusta la conexion a la base de datos en `.env` para usar los valores del servicio `mariadb` de Docker Compose.
+3. Ajusta la conexion a la base de datos en `.env` para usar los valores del servicio `mariadb` de Docker Compose o ajustalos segun te convenga.
 
 ```env
 APP_URL=http://localhost:8000
