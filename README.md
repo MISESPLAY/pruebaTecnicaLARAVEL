@@ -117,4 +117,4 @@ Si Laravel muestra un error de permisos para `storage` o `bootstrap/cache`, ejec
 docker compose exec app sh -c 'chgrp -R www-data storage bootstrap/cache && chmod -R ug+rwX storage bootstrap/cache'
 ```
 
-Si los estilos no cargan, confirma que el servicio `node` este activo y recarga el navegador sin cache. Vite debe responder en `http://localhost:5173`.
+Si los estilos no cargan, confirma que el servicio `node`  este activo y con el puerto libre `http://localhost:5173`.
