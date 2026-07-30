@@ -1,6 +1,6 @@
 # Prueba Tecnica Laravel - API de Tareas
 
-API REST para crear, listar, actualizar y eliminar tareas. El proyecto usa Laravel, MariaDB, Nginx, PHP-FPM y Vite mediante Docker Compose.
+API REST para crear, listar, actualizar y eliminar tareas. 
 
 ## Requisitos
 
@@ -79,7 +79,7 @@ Los estados validos son `pending`, `in_progress` y `done`.
 ### Crear una tarea
 
 ```bash
-curl --request POST http://localhost:8000/api/task \
+ POST http://localhost:8000/api/task \
   --header "Content-Type: application/json" \
   --data '{
     "title": "Preparar entrega",
@@ -93,7 +93,7 @@ curl --request POST http://localhost:8000/api/task \
 ### Actualizar una tarea
 
 ```bash
-curl --request PATCH http://localhost:8000/api/task/1 \
+PATCH http://localhost:8000/api/task/1 \
   --header "Content-Type: application/json" \
   --data '{"status":"done"}'
 ```
@@ -101,10 +101,23 @@ curl --request PATCH http://localhost:8000/api/task/1 \
 ### Eliminar una tarea
 
 ```bash
-curl --request DELETE http://localhost:8000/api/task/1
+DELETE http://localhost:8000/api/task/1
 ```
 
 Las respuestas de validacion usan HTTP `422`; una tarea inexistente devuelve HTTP `404`.
+
+### No hay necesidad de realiar los comandos clasicos
+
+Al ser consumido todo dentro de un contenedor deje los scripts necesarios para que automáticamente se realice los comando clásicos como 
+```bash
+php artisan serv
+composer install
+npm run dev 
+```
+
+
+
+ 
 
 ## Solucion de problemas
 
